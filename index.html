@@ -1,129 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AshokTours & Travels</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Poppins', sans-serif; background: #0f172a; color: white; }
-    header { padding: 20px 8%; display: flex; justify-content: space-between; align-items: center; }
-    header h1 { font-size: 24px; }
-    header a { text-decoration: none; color: white; margin-left: 20px; font-weight: 500; }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AshokTours & Travels</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Poppins',sans-serif;background:#f4f6f9;color:#222}
 
-    .hero {
-      text-align: center;
-      padding: 100px 20px;
-      background: linear-gradient(to right, #0f172a, #1e293b);
-    }
-    .hero h2 { font-size: 48px; margin-bottom: 20px; }
-    .hero p { font-size: 18px; color: #cbd5e1; max-width: 600px; margin: auto; }
-    .btn {
-      display: inline-block;
-      margin-top: 30px;
-      padding: 15px 30px;
-      background: #2563eb;
-      color: white;
-      text-decoration: none;
-      border-radius: 12px;
-      font-weight: 600;
-      transition: 0.3s;
-    }
-    .btn:hover { background: #1d4ed8; }
+header{background:#ffffff;padding:15px 8%;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 10px rgba(0,0,0,0.08);position:sticky;top:0;z-index:1000}
+header h1{color:#d90429;font-size:22px}
+nav a{text-decoration:none;color:#333;margin-left:25px;font-weight:500}
+nav a:hover{color:#d90429}
 
-    .section { padding: 80px 8%; text-align: center; }
-    .section h3 { font-size: 32px; margin-bottom: 40px; }
+.hero{height:90vh;background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),url('images/hero.jpg') center/cover no-repeat;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;color:#fff;padding:20px}
+.hero h2{font-size:52px;margin-bottom:20px}
+.hero p{max-width:700px;font-size:18px;color:#eee}
+.btn{margin-top:25px;padding:14px 30px;background:#d90429;color:#fff;text-decoration:none;border-radius:5px;font-weight:600;transition:.3s}
+.btn:hover{background:#a1031e}
 
-    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
-    .card {
-      background: #1e293b;
-      padding: 30px;
-      border-radius: 16px;
-      transition: 0.3s;
-    }
-    .card:hover { transform: translateY(-10px); }
-    .card h4 { margin-bottom: 15px; }
-    .card p { color: #cbd5e1; font-size: 14px; }
+.section{padding:80px 8%;text-align:center}
+.section h3{font-size:34px;margin-bottom:40px;color:#d90429}
 
-    .contact p { margin: 10px 0; color: #cbd5e1; }
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px}
+.card{background:#ffffff;padding:25px;border-radius:10px;box-shadow:0 8px 25px rgba(0,0,0,0.08);transition:.3s}
+.card:hover{transform:translateY(-8px)}
+.card img{width:100%;border-radius:8px;margin-bottom:15px}
+.card h4{margin-bottom:10px;color:#111}
+.card p{font-size:14px;color:#555}
 
-    footer {
-      padding: 20px;
-      text-align: center;
-      background: #020617;
-      color: #94a3b8;
-      font-size: 14px;
-    }
+.about{background:#ffffff}
+.about p{max-width:900px;margin:auto;color:#444;font-size:16px}
 
-    @media(max-width:768px){
-      .hero h2 { font-size: 32px; }
-    }
-  </style>
+.highlight{background:#d90429;color:#fff;padding:60px 8%;text-align:center}
+.highlight h3{margin-bottom:20px}
+.highlight p{font-size:16px;line-height:1.8}
+
+.gallery img{height:200px;object-fit:cover}
+
+.contact{background:#ffffff}
+.contact p{margin:10px 0;font-size:15px}
+
+footer{background:#111;color:#aaa;text-align:center;padding:25px;font-size:14px}
+
+.whatsapp{position:fixed;bottom:20px;right:20px;background:#25D366;color:white;padding:14px 22px;border-radius:50px;text-decoration:none;font-weight:600;box-shadow:0 5px 15px rgba(0,0,0,0.3)}
+
+@media(max-width:768px){
+.hero h2{font-size:34px}
+nav{display:none}
+}
+</style>
 </head>
 <body>
 
 <header>
-  <h1>AshokTours & Travels</h1>
-  <nav>
-    <a href="#services">Services</a>
-    <a href="#about">Why Us</a>
-    <a href="#contact">Contact</a>
-  </nav>
+<h1>AshokTours & Travels</h1>
+<nav>
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#cities">Cities</a>
+<a href="#vehicles">Vehicles</a>
+<a href="#contact">Contact</a>
+</nav>
 </header>
 
 <section class="hero">
-  <h2>Premium Car Travel Services</h2>
-  <p>Comfortable, Safe and Reliable car travel solutions for Airport Transfers, Outstation Trips & Corporate Travel.</p>
-  <a href="#contact" class="btn">Book Your Ride Now</a>
+<h2>Professional & Trusted Travel Services</h2>
+<p>3+ Years of Excellence in Safe, Comfortable & Personally Managed Trips. Skilled drivers, speed control options and real-time trip monitoring for complete peace of mind.</p>
+<a href="#contact" class="btn">Book Your Ride</a>
+</section>
+
+<section class="section about" id="about">
+<h3>About AshokTours</h3>
+<p>With over 3 years of strong market experience, AshokTours & Travels delivers reliable and safe travel services. We personally manage every trip — tracking vehicle location, coordinating drivers and ensuring smooth journey execution. Your safety is our top priority.</p>
 </section>
 
 <section class="section" id="services">
-  <h3>Our Services</h3>
-  <div class="cards">
-    <div class="card">
-      <h4>Airport Transfers</h4>
-      <p>On-time pickup and drop with professional drivers ensuring smooth airport journeys.</p>
-    </div>
-    <div class="card">
-      <h4>Outstation Trips</h4>
-      <p>Comfortable long-distance travel with well-maintained vehicles and experienced chauffeurs.</p>
-    </div>
-    <div class="card">
-      <h4>Corporate Travel</h4>
-      <p>Reliable business travel services designed for executives and corporate teams.</p>
-    </div>
-  </div>
+<h3>Our Services</h3>
+<div class="grid">
+<div class="card">
+<h4>Airport Transfers</h4>
+<p>On-time airport pickup and drop services with disciplined and trained drivers.</p>
+</div>
+<div class="card">
+<h4>Outstation Trips</h4>
+<p>Long distance journeys with full safety standards and speed control options.</p>
+</div>
+<div class="card">
+<h4>Corporate Travel</h4>
+<p>Professional travel solutions for business meetings and executive travel.</p>
+</div>
+</div>
 </section>
 
-<section class="section" id="about">
-  <h3>Why Choose Us?</h3>
-  <div class="cards">
-    <div class="card">
-      <h4>Professional Drivers</h4>
-      <p>Experienced, polite and trained drivers focused on safety and service.</p>
-    </div>
-    <div class="card">
-      <h4>Affordable Pricing</h4>
-      <p>Transparent pricing with no hidden charges and competitive travel packages.</p>
-    </div>
-    <div class="card">
-      <h4>24/7 Support</h4>
-      <p>Round-the-clock assistance to make your journey smooth and stress-free.</p>
-    </div>
-  </div>
+<section class="section" id="cities">
+<h3>Cities We Serve</h3>
+<div class="grid">
+<div class="card"><h4>Hyderabad</h4></div>
+<div class="card"><h4>Bangalore</h4></div>
+<div class="card"><h4>Chennai</h4></div>
+<div class="card"><h4>Vijayawada</h4></div>
+</div>
+</section>
+
+<section class="section" id="vehicles">
+<h3>Our Vehicle Fleet</h3>
+<div class="grid">
+<div class="card">
+<img src="images/innova.jpg" alt="Innova">
+<h4>Innova</h4>
+<p>Spacious SUV perfect for family and business travel.</p>
+</div>
+<div class="card">
+<img src="images/dzire.jpg" alt="Swift Dzire">
+<h4>Swift Dzire</h4>
+<p>Comfortable sedan suitable for city and outstation trips.</p>
+</div>
+<div class="card">
+<img src="images/tempo.jpg" alt="Tempo Traveller">
+<h4>Tempo Traveller</h4>
+<p>Ideal vehicle for group tours and long journeys.</p>
+</div>
+</div>
+</section>
+
+<section class="section gallery">
+<h3>Photo Gallery</h3>
+<div class="grid">
+<img src="images/gallery1.jpg">
+<img src="images/gallery2.jpg">
+<img src="images/gallery3.jpg">
+<img src="images/gallery4.jpg">
+</div>
+</section>
+
+<section class="highlight">
+<h3>Why Choose Us?</h3>
+<p>
+✔ Skilled & Trusted Drivers<br>
+✔ Personal Trip Monitoring<br>
+✔ Speed Limit Control Option<br>
+✔ 24/7 Customer Assistance<br>
+✔ Safety First Approach
+</p>
 </section>
 
 <section class="section contact" id="contact">
-  <h3>Contact Us</h3>
-  <p><strong>Phone:</strong> +91 98765 43210</p>
-  <p><strong>Email:</strong> contact@ashoktours.com</p>
-  <p><strong>Location:</strong> Your City, India</p>
+<h3>Contact Us</h3>
+<p><strong>Phone:</strong> +91 XXXXXXXXXX</p>
+<p><strong>WhatsApp:</strong> +91 XXXXXXXXXX</p>
+<p><strong>Email:</strong> contact@ashoktours.com</p>
+<p><strong>Location:</strong> Your City, India</p>
 </section>
 
 <footer>
-  © 2026 AshokTours & Travels. All Rights Reserved.
+© 2026 AshokTours & Travels. All Rights Reserved.
 </footer>
+
+<a href="https://wa.me/91XXXXXXXXXX" class="whatsapp">WhatsApp Us</a>
 
 </body>
 </html>
